@@ -1,5 +1,12 @@
 public class 变量 {
     public static void main(String[] args) {
+        String name;
+        String age = "2";
+        name = "jeff";
+        name = "jason"; // 后面会覆盖前面的
+        System.out.println(name);
+        System.out.println(age);
+
         byte b1 = 127;
 //        byte b2 = 128;
 
