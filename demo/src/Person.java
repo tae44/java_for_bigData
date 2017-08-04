@@ -18,7 +18,9 @@ public class Person {
 class Test{
     public static void main(String[] args) {
         Person p = new Person();
-        System.out.println(p.name); // 有初始值
+        p.name = "jeff";
+        p.age = 30;
+        System.out.println(p.name);
         System.out.println(p.age);
         p.sleep();
     }
