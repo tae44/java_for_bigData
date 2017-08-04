@@ -19,8 +19,16 @@ class Fu {
 
 // 会先实例化父类,再实例化子类
 class Zi extends Fu {
+    String name;
+    int age;
+
     public Zi() {
         // 不写默认也是这么调用
         super();
+    }
+
+    // 重写了toString方法
+    public String toString() {
+        return "我的名字是" + name + ", 年龄是" + age;
     }
 }
