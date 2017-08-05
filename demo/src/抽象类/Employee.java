@@ -12,7 +12,7 @@ public abstract class Employee {
         this.id = id;
         this.salary = salary;
     }
-
+    
     public String getName() {
         return name;
     }
