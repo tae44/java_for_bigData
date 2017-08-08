@@ -3,12 +3,15 @@ public class StringBufferDemo {
         // 添加();
         // 插入();
         // 删除();
-        // 替换();
+        替换();
     }
 
     public static void 替换() {
         StringBuffer sb = new StringBuffer("abcd");
-        sb.replace(1, 3, "qq"); // 范围含头不含尾
+        // sb.replace(1, 3, "qq"); 范围含头不含尾
+        // sb.setCharAt(2, 'p');
+        // sb.setLength(2);
+        sb.reverse();
         System.out.println(sb);
     }
 
@@ -47,4 +50,18 @@ public class StringBufferDemo {
         System.out.println("sb: " + sb);
         System.out.println("sb1: " + sb1);
     }
+
+    public static void 数组变字符串练习(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        StringBuilder sb = new StringBuilder();
+        for (int a : arr) {
+            sb.append(a);
+        }
+        System.out.println(sb);
+    }
 }
+
+/*
+    StringBuffer    jdk 1   线程安全,同步,速度慢
+    StringBuilder   jdk 5   单线程使用,线程不安全,速度快
+ */
