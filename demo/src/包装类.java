@@ -2,6 +2,18 @@ public class 包装类 {
     public static void main(String[] args) {
         // method1();
         // 进制转换();
+        // 判断相等();
+        判断大小();
+    }
+
+    private static void 判断大小() {
+        Integer a = new Integer("3");
+        Integer b = new Integer(19);
+        // 相等返回0,大于返回正数,小于返回负数
+        System.out.println(a.compareTo(b));
+    }
+
+    private static void 判断相等() {
         Integer a = new Integer("3");
         Integer b = new Integer(3);
         System.out.println(a == b);
