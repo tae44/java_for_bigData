@@ -3,14 +3,17 @@ import java.util.Collection;
 import java.util.Iterator;
 
 /*
-    Collection 根接口
+    Collection 根接口,单列集合
     List 有序的 可以存储重复的元素
     Set  无序的 不可以存储重复的元素
 
     List
-        ArrayList
-        LinkedList
-        Vector(不常用,已经被ArrayList取代)
+        ArrayList,数组结构(大小可变),不同步,查询速度快
+        LinkedList,链表结构,不同步,增删速度快
+        Vector(不常用,已经被ArrayList取代),数组结构(大小可变),同步,查询和增删速度均慢
+
+    Map
+        存储的是键值对,双列集合
  */
 
 public class 集合 {
