@@ -37,3 +37,4 @@ class M2 {
         System.out.println(b2.age);
     }
 }
+// 已复习

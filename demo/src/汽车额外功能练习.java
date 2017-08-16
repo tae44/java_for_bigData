@@ -16,7 +16,7 @@ class Car {
 }
 
 interface GPS {
-    public String getLovation();
+    public abstract String getLovation();
 }
 
 class GpsCar extends Car implements GPS {
@@ -29,3 +29,4 @@ class GpsCar extends Car implements GPS {
         return super.name + "的坐标是: " + super.speed + "," + super.speed;
     }
 }
+// 已复习

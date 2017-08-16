@@ -1,6 +1,6 @@
 package 抽象类;
 
-public class ProjectManager extends Employee{
+public class ProjectManager extends Employee {
     private double bonus;
 
     public ProjectManager(String name, int id, double salary, double bonus) {

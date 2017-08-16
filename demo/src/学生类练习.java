@@ -98,3 +98,4 @@ class Student {
         return (min < this.english) ? min : this.english;
     }
 }
+// 已复习

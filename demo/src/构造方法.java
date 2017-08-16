@@ -1,8 +1,7 @@
 public class 构造方法 {
     public static void main(String[] args) {
-        // M4 m = new M4();
-        M4 m1 = new M4("jeff", 30);
-        m1.speak();
+        M4 m = new M4("jeff", 30);
+        m.speak();
         // 匿名对象,用完及扔
         // new M4("jason", 18).speak();
     }
@@ -12,7 +11,7 @@ class M4 {
     public String name;
     public int age;
 
-    // 构造方法
+    // 构造方法(没有返回值),给对象进行初始化
     public M4() {
         System.out.println("M4实例化");
     }
@@ -37,3 +36,4 @@ class M4 {
         System.out.println("我睡觉啦");
     }
 }
+// 已复习

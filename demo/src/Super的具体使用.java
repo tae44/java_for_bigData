@@ -1,3 +1,8 @@
+/*
+    super和this的用法相似,this代表本类对象引用,super代表父类引用
+    当子父类出现同名成员时,可以用super进行区分
+    子类要调用父类构造方法时,可以使用super语句
+ */
 public class Super的具体使用 {
     public static void main(String[] args) {
         Zi z = new Zi();
@@ -32,3 +37,4 @@ class Zi extends Fu {
         return "我的名字是" + name + ", 年龄是" + age;
     }
 }
+// 已复习

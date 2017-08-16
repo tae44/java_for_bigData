@@ -17,8 +17,13 @@ public class 可变参数 {
         return a + b;
     }
 
-    // 方法重载 参数个数不同或参数类型不同
+    /*
+        方法重载:
+        1.在同一个类中,允许存在一个以上的同名方法,只要它们的参数个数或者参数类型不同即可
+        2.与返回值类型无关,只看参数列表
+     */
     public static int add(int a, int b, int c) {
         return a + b + c;
     }
 }
+// 已复习

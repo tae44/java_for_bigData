@@ -3,20 +3,22 @@ public class 多态 {
         // Cat c = new Cat();
         // Dogg d = new Dogg();
         // 父类引用指向子类对象
-        Animal c = new Cat(); // 自动类型提升 向上转型
+        Animal c = new Cat();  // 自动类型提升 向上转型
         Animal d = new Dogg();
         action(c);
+        System.out.println("-----------");
         action(d);
-        // 强制类型转换 向下转型
-        // Cat a = (Cat) c;
-        // a.catchMouse();
     }
 
     public static void action(Animal a) {
         a.eat();
+        // instanceof 用于判断该对象是否所属于某个类型
         if (a instanceof Cat) {
-            Cat aa = (Cat) a;
-            aa.catchMouse();
+            Cat cat = (Cat) a;  // 强制类型转换 向下转型
+            cat.catchMouse();
+        } else {
+            Dogg dog = (Dogg) a;
+            dog.lookHome();
         }
     }
 }
@@ -46,3 +48,4 @@ class Dogg extends Animal {
         System.out.println("看家");
     }
 }
+// 已复习
