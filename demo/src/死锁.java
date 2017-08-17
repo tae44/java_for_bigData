@@ -1,5 +1,5 @@
 /*
-    两条线程都在等待彼此先完成,造成了程序的停滞
+    所谓死锁,就是指两个线程都在等待彼此先完成,造成了程序的停滞,一般程序的死锁都是在程序运行时出现的
  */
 
 public class 死锁 {
@@ -15,7 +15,7 @@ public class 死锁 {
     }
 }
 
-class M18 implements Runnable{
+class M18 implements Runnable {
     private static ZhangSan zs = new ZhangSan();
     private static LiSi ls = new LiSi();
     public boolean flag;
@@ -58,7 +58,7 @@ class ZhangSan {
     }
 
     public void get() {
-        System.out.println("张三得到了书");
+        System.out.println("张三得到了画");
     }
 }
 
@@ -71,3 +71,4 @@ class LiSi {
         System.out.println("李四得到了书");
     }
 }
+// 已复习

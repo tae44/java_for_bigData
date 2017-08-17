@@ -2,6 +2,18 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+/*
+    在Java中可以捕获的异常可分为两类: 编译时异常和运行时异常
+    Java的编译器可以检测到的异常,称为编译时异常
+    Java的编译器是检测不到的,因此能够正常编译,但是在运行时会发生的异常称为运行时异常（RuntimeException）
+    常见的运行时异常:
+      1.IndexOutOfBoundsException: 集合或数组的索引值超过范围时发生的异常
+      2.NullPointerException: 应用程序在需要对象的地方使用null时发生的异常
+      3.ArithmeticException: 出现异常的运算条件发生的异常
+      4.IllegalArgumentsException: 传递的参数不合法或不正确发生的异常
+      5.ClassCastException: 将对象强制转换成不是实例的子类时发生的异常
+ */
+
 public class 异常 {
     public static void main(String[] args) throws MyException {
         // 编译时异常();
@@ -17,8 +29,8 @@ public class 异常 {
         }
     }
 
+    // throws 通常用于方法声明,后面跟着异常类,声明要抛出的异常
     private static void 抛出异常1() throws ClassNotFoundException {
-        // throws 通常用于方法声明,后面跟着异常类,声明要抛出的异常
         Class.forName("循环1");
     }
 
@@ -69,22 +81,24 @@ public class 异常 {
         try {
             // 需要检测的代码
             Class.forName("循环1");
-            // 出现异常后,try之后的代码就不执行了,会直接跳到catch段运行
+            // 出现异常后,try块中后面的代码就不执行了,会直接跳到catch块运行
             System.out.println("进行类加载");
         } catch (ClassNotFoundException e) {
             // 异常处理代码
-            // e.printStackTrace();
-            System.out.println(e.getMessage());
-            System.out.println(e.toString());
+            // e.printStackTrace();  获取异常类名和异常信息,以及异常出现在程序中的位置,返回值void
+            System.out.println(e.getMessage()); // 获取异常信息,返回字符串
+            System.out.println(e.toString());   // 获取异常类名和异常信息,返回字符串
         } finally {
             // 一定会执行的代码
+            // finally代码块只有一种情况不会被执行,就是在之前执行了System.exit(0)
         }
     }
 }
 
-// 自定义异常
+// 自定义的异常类需要继承Exception类
 class MyException extends Exception {
     public MyException(String msg) {
         super(msg);
     }
 }
+// 已复习

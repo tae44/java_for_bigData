@@ -1,3 +1,17 @@
+/*
+    将基本数据类型封装成对象的好处在于可以在对象中定义更多的功能方法操作该数据
+    常用的操作之一: 用于基本数据类型与字符串之间的转换
+    基本数据类型和包装数据类型对照:
+         基本数据类型     包装数据类型
+            byte            Byte
+            short          Short
+            int            Integer
+            long           Long
+            char           Character
+           boolean         Boolean
+            float          Float
+           double          Double
+ */
 public class 包装类 {
     public static void main(String[] args) {
         // method1();
@@ -60,3 +74,4 @@ public class 包装类 {
         int i2 = i1.intValue();
     }
 }
+// 已复习

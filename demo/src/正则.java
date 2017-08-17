@@ -20,16 +20,16 @@ public class 正则 {
         System.out.println(ss);
     }
 
+    // 根据正则表达式进行替换
     private static void 判断5() {
-        // 根据正则表达式进行替换
         String s = "abc123abc12abc1234abc";
         String regex = "\\d+";
         String ss = Pattern.compile(regex).matcher(s).replaceAll("_");
         System.out.println(ss);
     }
 
+    // 根据正则表达式进行拆分
     private static void 判断4() {
-        // 根据正则表达式进行拆分
         String s = "abc123abc12abc1234abc";
         String regex = "\\d+";
         String[] arr = Pattern.compile(regex).split(s);
@@ -56,8 +56,8 @@ public class 正则 {
         }
     }
 
+    // 判断一个字符串是否是由纯数字组成
     private static void 判断1() {
-        // 判断一个字符串是否是由纯数字组成
         String s = "1234567890d";
         char[] chs = s.toCharArray();
         boolean flag = true;
@@ -74,3 +74,4 @@ public class 正则 {
         }
     }
 }
+// 已复习

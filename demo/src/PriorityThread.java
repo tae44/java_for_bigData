@@ -10,7 +10,8 @@ public class PriorityThread {
         m1.start();
         m2.start();
         m3.start();
-        System.out.println(Thread.currentThread().getPriority());  // main的优先级是5,NORM_PRIORITY
+        // main的优先级是5,NORM_PRIORITY
+        System.out.println(Thread.currentThread().getPriority());
     }
 }
 
@@ -24,3 +25,4 @@ class M22 extends Thread {
         System.out.println(Thread.currentThread().getName());
     }
 }
+// 已复习

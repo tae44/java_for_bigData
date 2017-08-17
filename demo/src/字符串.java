@@ -1,14 +1,17 @@
+/*
+    字符串是一个特殊的对象
+    字符串一旦初始化就不可以被改变
+ */
 public class 字符串 {
     public static void main(String[] args) {
         String name = "Jason";
         System.out.println(name);
         /*
             使用String name = "Jason"这种方式的好处:
-            如果一个字符串已经被一个名称引用了,那么以后再有形同的字符串声明的时候,就不再重新开辟空间了
+              如果一个字符串已经被一个名称引用了,那么以后再有形同的字符串声明的时候,就不再重新开辟空间了
          */
         // String s = new String();  等价于String s = "";  不等于String s = null;
 
-        // 一个字符串对象一旦初始化完成就不会再改变了
         name = new String("Jeff");
         System.out.println(name);
         System.out.println("hello".equals("hello"));
@@ -37,3 +40,4 @@ public class 字符串 {
         System.out.println("带参数: " + str7);
     }
 }
+// 已复习

@@ -25,13 +25,14 @@ public class Resource {
     public synchronized void out() {
         if (flag) {
             try {
-                wait();
+                wait(); // 不带参数的wait()方法会使线程永久的等待下去,需要使用notify或者notifyAll方法唤醒
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
         System.out.println(Thread.currentThread().getName() + "***消费了***" + this.name);
         flag = true;
-        notify();
+        notify(); // wait()、notify()、notifyAll()只能在同步块或者同步方法中使用
     }
 }
+// 已复习

@@ -6,13 +6,14 @@ public class 字符串方法 {
         // 转换(s);
         // 判断(s);
         // 比较();
+        // 获取(s);
         // paixu();
-        cout();
+        // cout();
     }
 
     public static void 获取(String s) {
         s.length();                               // 返回字符串的长度
-        s.charAt(2);                              // 返回指定索引处的字符
+        s.charAt(2);                              // 返回指定索引处的字符,不存在则发生异常
         s.indexOf('o');                           // 返回指定字符第一次出现的索引,如果找不到则返回-1,下同
         s.indexOf('o', 5);          // 返回指定字符第一次出现的索引,从指定索引开始搜索
         s.indexOf("wo");                          // 返回指定字符串在此字符串中第一次出现的索引
@@ -21,8 +22,8 @@ public class 字符串方法 {
         s.lastIndexOf('l', 3);      // 返回指定字符最后一次出现的索引,从指定索引开始反向搜索
         s.lastIndexOf("wo");                  // 返回指定字符串最后一次出现的索引
         s.lastIndexOf("wo", 3);     // 返回指定字符串最后一次出现的索引,从指定索引开始反向搜索
-        s.substring(2);                           // 返回一个从指定索引到最后的新字符串
-        s.substring(2, 4);                        // 返回两个指定索引之间的新字符串,含头不含尾
+        s.substring(2);                           // 返回一个从指定索引到最后的新字符串,当头尾下标相等时结果是""字符串
+        s.substring(2, 4);                        // 返回两个指定索引之间的新字符串,含头不含尾,当开始下标等于长度时结果是""字符串
     }
 
     public static void 转换(String s) {
@@ -42,7 +43,7 @@ public class 字符串方法 {
 
         s.toUpperCase();                            // 字符串变大写
         s.toLowerCase();                            // 字符串变小写
-        s.replace('o', '$');       // 替换字符
+        s.replace('o', '$');       // 替换字符,当要替换的字符不存在时,结果还是是原来的字符串
         s.replace("ll", "%%");    // 替换字符串
         System.out.println("-" + "   abc   abc   ".trim() + "-");  // 去除前后两端空白
         System.out.println("Hello".concat(" World"));              // 拼接字符串
@@ -86,7 +87,7 @@ public class 字符串方法 {
 
     /*
         查找一个子串在字符串中出现的次数
-        查找子串是否存在用indexof方法,如果查找到,则记录出现的位置index和出现次数,然后index + len开始查找
+        查找子串是否存在用indexof方法,如果查找到,则记录出现的位置index和出现次数,然后从下一个位置开始查找
      */
     public static void cout() {
         String str = "nbadfegginbavtopoivnbacveqa";
@@ -100,3 +101,4 @@ public class 字符串方法 {
         System.out.println(key + "出现的次数是: " + count);
     }
 }
+// 已复习
