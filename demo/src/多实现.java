@@ -28,8 +28,8 @@ interface J3 {
     public void show2();
 }
 
+// 接口可以多继承
 interface J4 extends J2, J3 {
-    // 接口可以多继承
     public void show4();
 }
 
@@ -80,3 +80,4 @@ class M13 implements J4 {
         System.out.println("show M13...");
     }
 }
+// 已复习

@@ -50,3 +50,4 @@ class Chinese {
         return "Chinese [name=" + name + ", age=" + age + "]";
     }
 }
+// 已复习

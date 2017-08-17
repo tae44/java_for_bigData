@@ -76,3 +76,4 @@ class Japenese {
         return result;
     }
 }
+// 已复习

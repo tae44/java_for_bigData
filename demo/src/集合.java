@@ -14,6 +14,11 @@ import java.util.Iterator;
 
     Map
         存储的是键值对,双列集合
+
+    数组和集合类的不同:
+      数组虽然也可以存储对象,但长度是固定的,集合长度是可变的。数组中可以存储基本数据类型,集合只能存储对象
+    集合类的特点:
+      集合只用于存储对象,集合长度是可变的,集合可以存储不同类型的对象
  */
 
 public class 集合 {
@@ -23,10 +28,10 @@ public class 集合 {
         c.add("Spark");
         c.add("Strom");
 
-        // method1();
+        method1(c);
         // method2();
         // method3(c);
-        method4(c);
+        // method4(c);
     }
 
     public static void method4(Collection c) {
@@ -70,20 +75,17 @@ public class 集合 {
         // System.out.println(b);
     }
 
-    public static void method1() {
-        Collection coll = new ArrayList();
-        // 添加元素
-        coll.add("Hello");
-        coll.add("World");
-        coll.add("Hadoop");
+    public static void method1(Collection c) {
         // 删除元素
-        // coll.remove("Hello");
+        // c.remove("Hello");
         // 清空
-        // coll.clear();
+        // c.clear();
         // 判断是否为空集合
-        // System.out.println(coll.isEmpty());
+        // System.out.println(c.isEmpty());
         // 判断是否包含某个元素
-        // System.out.println(coll.contains("Hadoop"));
-        System.out.println(coll);
+        // System.out.println(c.contains("Hadoop"));
+        // 获取集合长度
+        System.out.println(c.size());
     }
 }
+// 已复习
