@@ -77,7 +77,7 @@ public class FileDemo {
 
     // file的构造方法
     public static void method1() {
-        // File.separator 根系统有关的分隔符
+        // File.separator 跟系统有关的分隔符
         File f1 = new File("/Users/jason/Desktop" + File.separator + "a.txt");
 //        File f1 = new File("/Users/jason/Desktop/a.txt");
 //        File f2 = new File("/Users/jason/Desktop/", "a.txt");
@@ -105,3 +105,4 @@ class FilterByTxt implements FileFilter {
         return pathname.getName().endsWith(s);
     }
 }
+// 已复习

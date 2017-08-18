@@ -11,7 +11,6 @@ public class BufferedWriterDemo {
             bw.write("Hello");
             bw.newLine();
             bw.write("World");
-            bw.close();
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
@@ -25,3 +24,4 @@ public class BufferedWriterDemo {
         }
     }
 }
+// 已复习

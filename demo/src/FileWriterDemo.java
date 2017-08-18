@@ -9,7 +9,8 @@ public class FileWriterDemo {
             f = new FileWriter("/Users/jason/Desktop/a.txt", true);
             f.write("hello ");
             f.write("world");
-            f.flush(); // 强制把流中的数据写入到文件中
+            // 强制把流中的数据写入到文件中
+            f.flush();
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
@@ -23,3 +24,4 @@ public class FileWriterDemo {
         }
     }
 }
+// 已复习
