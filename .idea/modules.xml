@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/demo/asdasd.iml" filepath="$PROJECT_DIR$/demo/asdasd.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_for_bigData.iml" filepath="$PROJECT_DIR$/java_for_bigData.iml" />
+      <module fileurl="file://$PROJECT_DIR$/黑马Java/黑马Java.iml" filepath="$PROJECT_DIR$/黑马Java/黑马Java.iml" />
     </modules>
   </component>
 </project>
