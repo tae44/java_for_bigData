@@ -1,10 +1,7 @@
-﻿package day05;
-
-/*
+package day05;/*
    方法的定义练习
 */
 import java.util.Scanner;
-
 public class MethodDemo_1{
 	public static void main(String[] args){
 		//printRect();

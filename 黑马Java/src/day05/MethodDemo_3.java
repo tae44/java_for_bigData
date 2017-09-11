@@ -1,4 +1,4 @@
-﻿package day05;
+package day05;
 
 /*
    方法,调用中的参数传递问题

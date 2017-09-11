@@ -1,4 +1,4 @@
-﻿package day05;
+package day05;
 
 /*
     方法的重载特性 (overload)

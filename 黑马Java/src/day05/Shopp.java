@@ -1,6 +1,4 @@
-﻿package day05;
-
-/*
+package day05;/*
    实现商品的库存管理
      功能:
 	    1. 展示用户选择功能清单
@@ -22,7 +20,6 @@
 			  修改所有的库存数量
 */
 import java.util.Scanner;
-
 public class Shopp{
 	public static void main(String[] args){
 		//使用数组,保存商品的信息
@@ -112,3 +109,9 @@ public class Shopp{
 		return chooseNumber;
 	}
 }
+
+
+
+
+
+

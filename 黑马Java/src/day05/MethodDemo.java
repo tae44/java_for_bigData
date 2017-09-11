@@ -1,4 +1,4 @@
-﻿package day05;
+package day05;
 
 /*
    方法的定义格式
@@ -38,3 +38,7 @@ public class MethodDemo{
 		return w * h;
 	}
 }
+
+
+
+

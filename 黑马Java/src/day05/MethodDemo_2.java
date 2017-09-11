@@ -1,4 +1,4 @@
-﻿package day05;
+package day05;
 
 /*
    方法定义和使用的注意事项
@@ -20,4 +20,5 @@ public class MethodDemo_2{
 		
 		return 1;
     }
+
 }

@@ -1,6 +1,4 @@
-package day05;
-
-/*
+package day05;/*
    实现随机点名器
      1. 存储所有学生姓名
 	 2. 预览所有学生姓名,遍历数组
@@ -12,7 +10,6 @@ package day05;
 	姓名存储到数组中,三个方法,使用一个数组中的数据, 方法传递参数
 */
 import java.util.Random;
-
 public class CallName{
 	public static void main(String[] args){
 		//定义数组,存储学生姓名
