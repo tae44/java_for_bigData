@@ -14,7 +14,7 @@ package day13.demo09;
  */
 public class Test2 {
 	public static void main(String[] args) {
-		Animal a= new Animal(){
+		Animal a = new Animal(){
 			public void eat(){
 				System.out.println("在吃饭");
 			} 
