@@ -10,8 +10,25 @@ package day20.练习;
 		  -(9)I(2)_(3)a(7)c(2)d(1)e(6)f(2)g(1)h(4)i(1)j(1)k(2)l(1)m(2)n(4)o(8)r(4)s(2)t(8)u(4)v(1)w(1)y(3)~(6)
  */
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
 public class Test2 {
     public static void main(String[] args) {
-
+        String s = new Scanner(System.in).next();
+        char[] cArr = s.toCharArray();
+        Map<Character, Integer> map = new HashMap<>();
+        for (char c : cArr) {
+            if (map.containsKey(c)) {
+                Integer i = map.get(c);
+                map.put(c, ++i);
+            } else {
+                map.put(c, 1);
+            }
+        }
+        for (char key : map.keySet()) {
+            System.out.print(key + "(" + map.get(key) + ")");
+        }
     }
 }
