@@ -22,6 +22,102 @@ package day22.练习;
 	txt 的类型的文件有  7 个
  */
 
-public class Test {
+import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
 
+public class Test {
+    // 求和,重复字符串中均用到此属性
+    private static int s = 0;
+    // 记录缩进的变量
+    private static String temp = "";
+    // 记录文件类型及数量的map
+    private static Map<String, Integer> map = new HashMap<>();
+
+    public static void main(String[] args) {
+        File file = new File(new Scanner(System.in).nextLine());
+        // f1(file);
+        // f2(file);
+        // System.out.println(sum);
+        // f3(file);
+        // f4(file);
+        f5(file);
+        for (String key : map.keySet()) {
+            System.out.println(key + " 类型的文件有 " + map.get(key) + " 个");
+        }
+    }
+
+    public static void f5(File file) {
+        File[] files = file.listFiles();
+        for (File f : files) {
+            if (f.isDirectory()) {
+                f5(f);
+            } else {
+                // 获取后缀
+                String[] suffixs = f.getName().split("\\.");
+                String suffix = suffixs[suffixs.length - 1];
+                if (map.containsKey(suffix)) {
+                    Integer i = map.get(suffix);
+                    map.put(suffix, ++i);
+                } else {
+                    map.put(suffix, 1);
+                }
+            }
+        }
+    }
+
+    public static void f4(File file) {
+        if (s == 0) {
+            System.out.println(file.getName());
+            // 每往下一层,\t多一个
+            temp = getString("\t", ++s);
+        } else {
+            System.out.println(temp + file.getName());
+            temp = getString("\t", ++s);
+        }
+        File[] files = file.listFiles();
+        for (File f : files) {
+            if (f.isDirectory()) {
+                f4(f);
+            } else {
+                System.out.println(temp + f.getName());
+            }
+        }
+    }
+
+    public static void f3(File file) {
+        if (file.exists()) {
+            file.delete();
+        }
+    }
+
+    public static void f2(File file) {
+        File[] files = file.listFiles();
+        for (File f : files) {
+            if (f.isDirectory()) {
+                f2(f);
+            } else {
+                s += f.length();
+            }
+        }
+    }
+
+    public static void f1(File file) {
+        File[] files = file.listFiles(new MyFilter());
+        for (File f : files) {
+            if (f.isFile()) {
+                System.out.println(f);
+            }
+        }
+    }
+
+    // 重复字符串的方法
+    public static String getString(String s, int n) {
+        String other = "";
+        for (int i = 0; i < n; i++) {
+            other += s;
+        }
+        return other;
+    }
 }
