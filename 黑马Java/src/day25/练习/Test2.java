@@ -25,6 +25,5 @@ public class Test2 {
         pro.store(fos, "");
         fos.close();
         fis.close();
-        System.out.println();
     }
 }
