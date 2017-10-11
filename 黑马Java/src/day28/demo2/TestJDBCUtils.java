@@ -1,10 +1,10 @@
 package day28.demo2;
 
+import day28.jdbcutil.JDBCUtils;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
-import cn.itcast.jdbcutil.JDBCUtils;
 
 public class TestJDBCUtils {
 	public static void main(String[] args)throws Exception {
