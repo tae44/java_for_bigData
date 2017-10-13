@@ -1,9 +1,8 @@
 package day30.demo3;
 
+import org.apache.commons.dbcp2.BasicDataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
-
-import org.apache.commons.dbcp.BasicDataSource;
 
 /*
  *  连接池jar包中,定义好一个类 BasicDataSource

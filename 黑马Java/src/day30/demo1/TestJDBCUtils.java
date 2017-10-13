@@ -1,8 +1,7 @@
 package day30.demo1;
 
+import day30.jdbcutil.JDBCUtilsConfig;
 import java.sql.Connection;
-
-import cn.itcast.jdbcutil.JDBCUtilsConfig;
 
 public class TestJDBCUtils {
 	public static void main(String[] args) {
