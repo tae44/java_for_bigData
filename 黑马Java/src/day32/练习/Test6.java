@@ -5,13 +5,27 @@ package day32.练习;
 	public Object getProperty(Object obj, String propertyName, Object value){}
  */
 
-public class Test6 {
-    public static void main(String[] args) {
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
+public class Test6 {
+    private static Class c;
+
+    public static void main(String[] args) throws Exception {
+        Class t = Class.forName("day32.练习.Test6");
+        Method method = t.getMethod("getProperty", Object.class, String.class, Object.class);
+        c = C.class;
+        Object obj1 = t.newInstance();
+        Object obj2 = c.newInstance();
+        Object o = method.invoke(obj1, obj2, "name", "jeff");
+        System.out.println(o);
     }
 
-    public Object getProperty(Object obj, String propertyName, Object value){
-        return null;
+    public Object getProperty(Object obj, String propertyName, Object value) throws Exception {
+        Field field = c.getField(propertyName);
+        field.set(obj, value);
+        Object o = field.get(obj);
+        return o;
     }
 }
 
